@@ -1,8 +1,12 @@
 from datetime import date
+from datetime import datetime
 
 def check_birthdate(Year, Month, Day):
-	today= date.today()
-	if (Year<= today.year):
+	
+
+	users_date= date(Year, Month, Day)
+	todays_date=date.today()
+	if (users_date< todays_date):
 		calculate_age(Year, Month, Day)
 		return True
 
